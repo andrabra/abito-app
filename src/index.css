@@ -134,13 +134,14 @@ table {
   --primary-background-color: rgba(37, 110, 235, 1);
   --primary-text-color: rgba(10, 20, 58, 1);
   --secondary-text-color: rgba(196, 196, 196, 1);
+
+  font-family: Roboto, sans-serif;
 }
 
 .body {
   padding: 0;
   margin: 0;
   color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
 }
 
 .container {
@@ -153,7 +154,6 @@ table {
 
 .main {
   margin-top: 24px;
-  font-family: Roboto, sans-serif;
 }
 
 .search {
