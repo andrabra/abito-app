@@ -1,4 +1,4 @@
-export const cardArray = [
+export const  cardArray = [
   {
     id: 1,
     img: '/img/product-img.png',

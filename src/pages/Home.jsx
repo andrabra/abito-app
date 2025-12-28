@@ -1,8 +1,11 @@
 import Card from '../components/Card/Card';
 import { cardArray, sideArray } from '../constants';
 import SideCard from '../components/SideCard/SideCard';
+import { useOutletContext } from 'react-router-dom';
 
 export const Home = () => {
+  const { products } = useOutletContext();
+
   return (
     <>
       <section className='content'>
@@ -11,7 +14,8 @@ export const Home = () => {
             <div className='content-main'>
               <h2 className='content-main__title'>Рекомендации для вас</h2>
               <div className='content-main__list'>
-                {cardArray.map((card) => (
+              
+                {products.length > 0 ? products.map((card) => (
                   <Card
                     key={card.id}
                     id={card.id}
@@ -21,7 +25,10 @@ export const Home = () => {
                     location={card.location}
                     date={card.date}
                   />
-                ))}
+                ))
+                :
+                <h2>Товары не найдены</h2>
+                }
               </div>
             </div>
 

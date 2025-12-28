@@ -1,10 +1,10 @@
-import { useParams } from 'react-router-dom';
-import { cardArray } from '../constants';
+import { useParams, useOutletContext } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export const Product = () => {
   const { id } = useParams();
-  const foundProduct = cardArray.find((card) => card.id === Number(id));
+  const { products } = useOutletContext();
+  const foundProduct = products.find((card) => card.id === Number(id));
 
   return (
     <>
