@@ -1,6 +1,7 @@
 import { Header } from '../components/Header/Header';
 import Card from '../components/Card/Card';
-import { cardArray } from '../constants';
+import { cardArray, sideArray } from '../constants';
+import SideCard from '../components/SideCard/SideCard';
 
 export const Home = () => {
   return (
@@ -52,48 +53,14 @@ export const Home = () => {
                 <h3 className='content-side__title'>Сервисы и услуги</h3>
                 <div className='content-side__box'>
                   <div className='content-side__list'>
-                    <div className='content-side__list-item'>
-                      <div className='content-side__list-item--img'>
-                        <img src='/img/delivery.svg' alt='Доставка' />
-                      </div>
-                      <div className='content-side__list-item--title'>
-                        <h5 className='content-side__list-item--title-heading'>
-                          Доставка
-                        </h5>
-                      </div>
-                      <p className='content-side__list-item--desc'>
-                        Проверка при получении и&nbsp;возможность бесплатно
-                        вернуть товар
-                      </p>
-                    </div>
-                    <div className='content-side__list-item'>
-                      <div className='content-side__list-item--img'>
-                        <img src='/img/car.svg' alt='Автотека' />
-                      </div>
-                      <div className='content-side__list-item--title'>
-                        <h5 className='content-side__list-item--title-heading'>
-                          Автотека
-                        </h5>
-                      </div>
-                      <p className='content-side__list-item--desc'>
-                        Отчёт с&nbsp;историей авто: пробег, владельцы, сведения
-                        о залоге, ДТП и&nbsp;ремонтах
-                      </p>
-                    </div>
-                    <div className='content-side__list-item'>
-                      <div className='content-side__list-item--img'>
-                        <img src='/img/house.svg' alt='Дом' />
-                      </div>
-                      <div className='content-side__list-item--title'>
-                        <h5 className='content-side__list-item--title-heading'>
-                          Онлайн-бронирование жилья
-                        </h5>
-                      </div>
-                      <p className='content-side__list-item--desc'>
-                        Посуточная аренда квартир и&nbsp;домов: большой выбор
-                        вариантов для поездок по&nbsp;России
-                      </p>
-                    </div>
+                    {sideArray.map((card) => (
+                      <SideCard
+                        key={card.id}
+                        img={card.img}
+                        title={card.title}
+                        desc={card.desc}
+                      />
+                    ))}
                   </div>
                 </div>
                 <div className='divider'></div>
