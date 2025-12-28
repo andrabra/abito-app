@@ -1,5 +1,5 @@
 import Card from '../components/Card/Card';
-import { cardArray, sideArray } from '../constants';
+import { sideArray } from '../constants';
 import SideCard from '../components/SideCard/SideCard';
 import { useOutletContext } from 'react-router-dom';
 
