@@ -1,0 +1,46 @@
+.header {
+  margin-top: 30px;
+  font-family: Roboto, sans-serif;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: fit-content;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.header-heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.header-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.header-burger {
+  height: 15px;
+  width: 30px;
+  display: none;
+}
+
+@media (max-width: 786px) {
+  .header-burger {
+    display: block;
+  }
+
+  .header-controls {
+    display: none;
+  }
+}
